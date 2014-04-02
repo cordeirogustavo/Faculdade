@@ -1,21 +1,21 @@
 <?php
 class Pais{
-	private $codigo;
+	private $codigoIso;
 	private $nome;
 	private $populacao;
 	private $dimensao;
     private $paisVizinho = Array();
          
 
-    public function __construct($codigo , $nome, $dimensao){
-		$this->codigo = $codigo;
+    public function __construct($codigoIso , $nome, $dimensao){
+		$this->codigoIso = $codigoIso;
 		$this->nome = $nome;
 		$this->dimensao = $dimensao;
 	}
          
     
-    public function verificaCodigo($codigo){
-            if ($this->codigo == $codigo){
+    public function verificaCodigoIso($codigoIso){
+            if ($this->codigo == $codigoIso){
 				return TRUE;
              }else{ 
 				return FALSE;
@@ -64,7 +64,7 @@ class Pais{
 	
 	public function buscaFronteira($paisVizinho){
 		foreach($paisVizinho->paisVizinho as $key => $value){
-		if($this->paisVizinho[$key]->verificaCodigo == $paisVizinho->verificaCodigo){
+		if($this->paisVizinho[$key]->codigoIso == $paisVizinho->codigoIso){
 					echo "O ".$value->nome." faz frenteira com o ". $paisVizinho->nome;
 			}
 		}
@@ -73,7 +73,7 @@ class Pais{
 	public function listarVizinhos($paisVizinho){
 		foreach($this->paisVizinho as $chave => $value1){
 			foreach($paisVizinho->paisVizinho as $key => $value2){
-				if($this->paisVizinho[$chave]->verificaCodigo == $paisVizinho[$key]->verificaCodigo){
+				if($this->paisVizinho[$chave]->codigoIso == $paisVizinho[$key]->codigoIso){
 						$lista .= $this->paisVizinho[$chave]->nome.", ";
 				}
 			}
