@@ -15,7 +15,7 @@ class Pais{
          
     
     public function verificaCodigoIso($codigoIso){
-            if ($this->codigo == $codigoIso){
+            if ($this->codigoIso == $codigoIso){
 				return TRUE;
              }else{ 
 				return FALSE;
