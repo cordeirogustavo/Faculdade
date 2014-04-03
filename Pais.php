@@ -22,11 +22,11 @@ class Pais{
 			}
          }
           
-	public function setCodigo($codigo){
-		$this->codigo = $codigo;
+	public function setCodigoIso($codigoIso){
+		$this->codigoIso = $codigoIso;
 	}
-	public function getCodigo(){
-		return $this->codigo;
+	public function getCodigoIso(){
+		return $this->codigoIso;
 	}
 	public function setNome($nome){
 		$this->nome = $nome;
